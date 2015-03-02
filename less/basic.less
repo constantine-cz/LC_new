@@ -5,8 +5,9 @@
 
 @green: #27ae60;
 @grey: #f8f7f5;
+@grey_light: #ccc;
 @grey_dark: #999;
-@grey_darkest: #8c8b8b;
+@grey_darkest: #292929;
 
 
 *{
@@ -17,20 +18,34 @@
 
 html{
     font-family: 'Open Sans', Verdana, sans-serif;
-    background: #ccc;
     color: #434343;
-
+    background: url(../gfx/back1.png);
+    height: 100%;
+    background-position: center top;
+    background-attachment: fixed;
+    background-color: #cccccc;
+    background-size: cover;
 }
 
 .clr{
     clear: both;
 }
+p{
+    margin-bottom: 1em;
+}
 
+
+#logo{
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+}
 #all{
     margin: 50px auto;
     width: 1200px;
-    background: #fff;
-    box-shadow: 0px 0px 5px @grey_dark;
+    //background: #fff;
+    //box-shadow: 0px 0px 5px @grey_dark;
 }
 
 #topnav{
@@ -74,7 +89,7 @@ html{
 #slider{
     width: 850px;
     height: 350px;
-    background: lighten( @green, 30%);
+    background: @grey_darkest: #292929;
     float: left;
 }
 #blog{
@@ -94,14 +109,21 @@ html{
         &.big{
             font-size: 1.2em;
             padding: 10px 15px;
-            color: darken(@grey, 10%);
+            color: @grey_light;
         }
     }
     .item{
-        border-bottom: 1px solid @grey_dark;
+        border-bottom: 1px solid @grey_light;
         overflow: hidden;
         padding: 6px 15px;
+        color: @grey_light;
         
+        &.last{
+            border-bottom: none;
+        }
+        strong{
+            color: #fff;
+        }
         .left{
             float: left; 
         }
@@ -149,7 +171,6 @@ html{
 }
 
 #container{
-    background: #fff;
     overflow: hidden;
 }
 #menu{
@@ -166,7 +187,7 @@ html{
         border-top: 1px solid #fff;
         border-bottom: 1px solid @grey_dark;
         
-        &:hover{
+        &:hover, &.active{
             background: #fff;
         }
         
@@ -186,6 +207,7 @@ html{
 }
 #main{
     margin-left: 300px;
-    padding: 20px;
+    padding: 20px 30px;
+    background: #fff;
 }
 
