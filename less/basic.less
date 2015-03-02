@@ -89,7 +89,7 @@ p{
 #slider{
     width: 850px;
     height: 350px;
-    background: @grey_darkest: #292929;
+    background: @grey_darkest;
     float: left;
 }
 #blog{
@@ -146,27 +146,49 @@ p{
         text-align: center;
         font-size: 1.3em;
         cursor: pointer;
+        transition: 0.2s;
     }
     .fb{
-        background: #3a5999;
+        background: darken(#3a5999, 10%); 
+        &:hover{
+            background: #3a5999;
+        }
     }
     .twitter{
-        background: #3aa9de;
+        background: darken(#3aa9de, 10%); ;
+        &:hover{
+            background: #3aa9de;
+        }
     }
     .gplus{
-        background: #d14836;
+        background: darken(#d14836, 10%); ;
+        &:hover{
+            background: #d14836;
+        }
     }
     .youtube{
-        background: #cc332d;
+        background: darken(#cc332d, 10%); ;
+        &:hover{
+            background: #cc332d;
+        }
     }
     .twitch{
-        background: #67217a;
+        background: darken(#67217a, 10%); ;
+        &:hover{
+            background: #67217a;
+        }
     }
     .tumblr{
-        background: #2c4762;
+        background: darken(#2c4762, 10%); ;
+        &:hover{
+            background: #2c4762;
+        }
     }
     .rss{
-        background: #ff8300;
+        background: darken(#ff8300, 10%); 
+        &:hover{
+            background: #ff8300;
+        }
     }
 }
 
