@@ -1,0 +1,114 @@
+/* 
+    Created on : 2.3.2015, 12:57:10
+    Author     : Jiří Ludvar <jiri.ludvar@mediaaction.cz>
+*/
+
+@green: #27ae60;
+@grey: #f8f7f5;
+@grey_dark: #999;
+@grey_darkest: #8c8b8b;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Open Sans', Verdana, sans-serif;
+    background: #ccc;
+}
+
+.clr{
+    clear: both;
+}
+
+#all{
+    margin: 50px auto;
+    width: 1200px;
+    background: #fff;
+}
+
+#topnav{
+    overflow: hidden;
+    
+    li{
+        display: inline-block;
+        float: left;
+        width: 100% / 7;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        
+        &.active a{
+            border-bottom: 3px solid @green;
+            background: #fff;
+        }
+        &.first a{
+            border-left: none;
+        }
+        &.last a{
+            border-right: none;
+        }
+    }
+    a{
+        color: #434343;
+        text-decoration: none;
+        display: block;
+        border-left: 1px solid #fff;
+        border-right: 1px solid @grey_dark;
+        background: @grey;
+        transition: background-color 0.5s;
+        height: 50px;
+        
+        
+        &:hover{
+            background: #fff;
+        }
+    }
+}
+
+#slider{
+    width: 850px;
+    height: 350px;
+    background: lighten( @green, 30%);
+    float: left;
+}
+#blog{
+    width: 350px;
+    height: 350px;
+    background: @grey_darkest;
+    float: left;
+    color: #fff;
+    font-size: 0.9em;
+    
+    #vypisky{
+        height: 300px;
+    }
+    strong{
+        display: block;
+        
+        &.big{
+            font-size: 1.2em;
+            padding: 10px 15px;
+            color: darken(@grey, 10%);
+        }
+    }
+    .item{
+        border-bottom: 1px solid @grey_dark;
+        overflow: hidden;
+        padding: 6px 15px;
+        
+        .left{
+            float: left; 
+        }
+        .right{
+            float: right;
+        }
+    } 
+}
+#sm{
+    height: 50xp;
+    width: 350px;
+}
