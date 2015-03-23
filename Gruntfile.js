@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                     ]
                 },
                 files: {
-                    "css/style.css": "less/*.less"
+                    "css/style.css": ["less/basic.less","less/tablet.less","less/pc.less"]
                 }
             }
         },

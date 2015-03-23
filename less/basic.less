@@ -19,12 +19,7 @@
 html{
     font-family: 'Open Sans', Verdana, sans-serif;
     color: #434343;
-    background: url(../gfx/back2.jpg);
-    height: 100%;
-    background-position: center top;
-    background-attachment: fixed;
-    background-color: #cccccc;
-    background-size: cover;
+    
 }
 
 .clr{
@@ -46,9 +41,7 @@ img{
 }
 #all{
     margin: 50px auto;
-    width: 1200px;
-    //background: #fff;
-    //box-shadow: 0px 0px 5px @grey_dark;
+    max-width: 1200px;
 }
 
 #topnav{
@@ -57,7 +50,7 @@ img{
     li{
         display: inline-block;
         float: left;
-        width: 100% / 7;
+        width: 100%;
         text-align: center;
         height: 50px;
         line-height: 50px;
@@ -79,6 +72,8 @@ img{
         display: block;
         border-left: 1px solid #fff;
         border-right: 1px solid @grey_dark;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid @grey_dark;
         background: @grey;
         transition: background-color 0.5s;
         height: 50px;
@@ -90,19 +85,17 @@ img{
 }
 
 #slider{
-    width: 850px;
-    height: 350px;
+    width: 100%;
+    height: auto;
     background: @grey_darkest;
     float: left;
 }
 #blog{
-    width: 350px;
-    height: 350px;
     background: @grey_darkest;
-    float: left;
     color: #fff;
     
     #vypisky{
+        display: none;
         height: 300px;
         font-size: 0.9em;
     }
@@ -136,15 +129,14 @@ img{
     } 
 }
 #sm{
-    height: 50xp;
-    width: 350px;
+    height: 50px;
+    width: 100%;
     overflow: hidden;
     
     span{
         display: inline-block;
-        width: 50px;
+        width: 100% /7;
         float: left;
-        border-bottom: 1px solid @grey;
         line-height: 50px;
         text-align: center;
         font-size: 1.3em;
@@ -199,8 +191,7 @@ img{
     overflow: hidden;
 }
 #menu{
-    float: left;
-    width: 300px;
+    background: #999;
     
     .separator{
         font-weight: bold;
@@ -222,6 +213,7 @@ img{
         border-top: 1px solid #fff;
         border-bottom: 1px solid @grey_dark;
         
+        
         &:hover, &.active{
             background: #fff;
         }
@@ -241,6 +233,8 @@ img{
     }
 }
 #odznaky{
+    display: none;
+    
     img{
         display: block;
         max-width: 250px;
@@ -248,7 +242,6 @@ img{
     }
 }
 #main{
-    margin-left: 300px;
     padding: 20px 30px;
     background: #fff;
 }

@@ -1,0 +1,116 @@
+/* 
+    Created on : 23.3.2015, 13:08:57
+    Author     : Jiří Ludvar <jiri.ludvar@mediaaction.cz>
+*/
+
+@media (min-width: 768px){
+    #topnav{
+
+        li{
+            width: 100% / 7;
+            
+
+            &.first{
+                width: 100% / 7;
+            }
+            &.first a{
+                border-left: none;
+            }
+            &.last a{
+                border-right: none;
+            }
+        }
+        a{
+            display: block;
+            border-top: none;
+            border-bottom: none;
+        }
+    }
+    
+    #sm{
+        height: 350px;
+        width: 50px;
+        overflow: hidden;
+
+        span{
+            display: inline-block;
+            width: 50px;
+            float: left;
+            line-height: 50px;
+            text-align: center;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+    }
+    #slider{
+        width: calc(~'100% - 50px');
+        height: 350px;
+    }
+    #menu{
+        float: left;
+        width: 280px;
+
+        .item{
+            width: 100%;
+            float: none;
+            border-left: none;
+            border-right: none;
+        }
+    }
+    #main{
+        margin-left: 280px;
+    }
+    #odznaky{
+        display: block;
+    }
+}
+
+
+
+@media (min-width: 1200px){
+    #slider{
+        width: 850px;
+        height: 350px;
+        float: left;
+    }
+    #sm{
+        width: 350px;
+        height: 50px;
+    }
+    #blog{
+        width: 350px;
+        height: 350px;
+        float: left;
+
+        #vypisky{
+            height: 300px;
+            display: block;
+        }
+        .item{
+            overflow: hidden;
+            padding: 6px 15px;
+
+            &.last{
+                border-bottom: none;
+            }
+            strong{
+                color: #fff;
+            }
+            .left{
+                float: left; 
+            }
+            .right{
+                float: right;
+            }
+        } 
+    }
+    #menu{
+        width: 300px; 
+    }
+    #main{
+        margin-left: 300px;
+    }
+}
+
+
