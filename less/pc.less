@@ -4,29 +4,7 @@
 */
 
 @media (min-width: 768px){
-    #topnav{
 
-        li{
-            width: 100% / 7;
-            
-
-            &.first{
-                width: 100% / 7;
-            }
-            &.first a{
-                border-left: none;
-            }
-            &.last a{
-                border-right: none;
-            }
-        }
-        a{
-            display: block;
-            border-top: none;
-            border-bottom: none;
-        }
-    }
-    
     #sm{
         height: 350px;
         width: 50px;
@@ -50,6 +28,7 @@
     #menu{
         float: left;
         width: 280px;
+        background: none;
 
         .item{
             width: 100%;
@@ -58,14 +37,56 @@
             border-right: none;
         }
     }
+    #sections{
+        li{
+            height: 30px !important;
+            line-height: 30px !important;
+        }
+        a{
+            height: 30px !important;
+        }
+    }
     #main{
         margin-left: 280px;
     }
     #odznaky{
         display: block;
     }
+    #menu, #sections, #topnav{
+        .inner{
+            display: block !important;
+        }
+    }
+    #menu, #sections, #topnav{
+        .hide-menu{
+            display: none;
+        }
+    }
 }
 
+@media (min-width: 1024px){
+    #topnav, #sections{
+        li{
+            width: 100% / 7;
+
+
+            &.first{
+                width: 100% / 7;
+            }
+            &.first a{
+                border-left: none;
+            }
+            &.last a{
+                border-right: none;
+            }
+        }
+        a{
+            display: block;
+            border-top: none;
+            border-bottom: none;
+        }
+    }
+}
 
 
 @media (min-width: 1200px){

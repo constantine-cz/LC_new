@@ -36,15 +36,15 @@ img{
 #logo{
     img{
         display: block;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 }
 #all{
-    margin: 50px auto;
+    margin: 0 auto 50px;
     max-width: 1200px;
 }
 
-#topnav{
+#topnav, #sections{
     overflow: hidden;
     
     li{
@@ -81,6 +81,15 @@ img{
         &:hover{
             background: #fff;
         }
+    }
+}
+
+#sections{
+    background: #dadfe1;
+    
+    ul{
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
 
@@ -141,7 +150,7 @@ img{
         text-align: center;
         font-size: 1.3em;
         cursor: pointer;
-        transition: 0.2s;
+        transition: background-color 0.2s;
     }
     .fb{
         background: darken(#3a5999, 10%); 
@@ -193,15 +202,7 @@ img{
 #menu{
     background: #999;
     
-    .separator{
-        font-weight: bold;
-        text-align: center;
-        border-top: 1px solid #fff;
-        border-bottom: 1px solid darken(@grey_dark, 20%);
-        background: darken(@grey,10%);
-        height: 2em;
-        line-height: 2em;
-    }
+    
     
     .item{
         padding: 0px 10px;
@@ -209,7 +210,7 @@ img{
         font-size: 0.9em;
         background: @grey;
         cursor: pointer;
-        transition: 0.5s;
+        transition: background-color 0.5s;
         border-top: 1px solid #fff;
         border-bottom: 1px solid @grey_dark;
         
@@ -232,6 +233,28 @@ img{
         }
     }
 }
+#menu, #sections, #topnav{
+    .separator{
+        font-weight: bold;
+        text-align: center;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid darken(@grey_dark, 20%);
+        background: darken(@grey,10%);
+        height: 2em;
+        line-height: 2em;
+        
+        a{
+            color: #434343;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            display: block;
+        }
+    }
+    .inner{
+        display: none;
+    }
+}
 #odznaky{
     display: none;
     
@@ -245,4 +268,5 @@ img{
     padding: 20px 30px;
     background: #fff;
 }
+
 
