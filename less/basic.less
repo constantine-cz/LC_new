@@ -19,9 +19,16 @@
 html{
     font-family: 'Open Sans', Verdana, sans-serif;
     color: #434343;
-    
-}
 
+}
+a{
+    color: @green;
+    transition: color 0.5s;
+
+    &:hover{
+        color: lighten(@green, 10%);
+    }
+}
 .clr{
     clear: both;
 }
@@ -46,7 +53,7 @@ img{
 
 #topnav, #sections{
     overflow: hidden;
-    
+
     li{
         display: inline-block;
         float: left;
@@ -54,7 +61,7 @@ img{
         text-align: center;
         height: 50px;
         line-height: 50px;
-        
+
         &.active a{
             border-bottom: 3px solid @green;
             background: #fff;
@@ -77,7 +84,7 @@ img{
         background: @grey;
         transition: background-color 0.5s;
         height: 50px;
-        
+
         &:hover{
             background: #fff;
         }
@@ -86,48 +93,97 @@ img{
 
 #sections{
     background: #dadfe1;
-    
+
     ul{
         max-width: 1200px;
         margin: 0 auto;
     }
 }
 
-#slider{
+#sliders{
     width: 100%;
     height: auto;
     background: @grey_darkest;
     float: left;
+    display: none;
+}
+#slider{
+    max-height: 300px;
 }
 #blog{
     background: @grey_darkest;
     color: #fff;
-    
+
     #vypisky{
-        display: none;
-        height: 300px;
+        height: 210px;
         font-size: 0.9em;
     }
-    strong{
-        display: block;
-        
-        &.big{
-            font-size: 1.2em;
-            padding: 10px 15px;
-            color: @grey_light;
+    .sisea-search-form{
+        padding: 10px 15px;
+
+        fieldset{
+            border: none;
+            font-size: 0.9em;
+
+            label{
+                font-size: 1.2em;
+                font-weight: bold;
+                color: @grey_light;
+                display: block;
+                padding-bottom: 10px;
+            }
+            input[type="text"]{
+                border: none;
+                padding: 5px;
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                border-bottom: 2px solid darken(@grey_dark, 10%);
+            }
+            input[type="submit"]{
+                border: none;
+                padding: 0 10px;
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                float: right;
+                text-align: center;
+                cursor: pointer;
+                background: @green;
+                color: #fff;
+                font-size: 1em;
+                border-bottom: 2px solid darken(@green, 10%);
+                transition: background-color 0.5s;
+                margin-top: 10px;
+
+                &:hover{
+                    background: lighten(@green, 10%);
+                }
+            }
         }
     }
+    a{
+        display: block;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    strong{
+        font-size: 1.2em;
+        padding: 10px 15px;
+        color: @grey_light;
+        display: block;
+    }
+
+
     .item{
         border-bottom: 1px solid darken(@grey_dark, 10%);
         overflow: hidden;
         padding: 6px 15px;
         color: @grey_light;
-        
-        &.last{
+
+        &.last, &:nth-child(4){
             border-bottom: none;
-        }
-        strong{
-            color: #fff;
         }
         .left{
             float: left; 
@@ -137,12 +193,12 @@ img{
         }
     } 
 }
-#sm{
+#sm, #social{
     height: 50px;
     width: 100%;
     overflow: hidden;
-    
-    span{
+
+    a{
         display: inline-block;
         width: 100% /7;
         float: left;
@@ -151,6 +207,7 @@ img{
         font-size: 1.3em;
         cursor: pointer;
         transition: background-color 0.2s;
+        color: #fff !important;
     }
     .fb{
         background: darken(#3a5999, 10%); 
@@ -195,17 +252,27 @@ img{
         }
     }
 }
-
+#social{
+    height: auto; 
+    
+    a{
+        width: 50px;
+        height: 50px;
+    }
+}
+.submitted{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 5px 0 20px;
+}
 #container{
     overflow: hidden;
 }
 #menu{
     background: #999;
-    
-    
-    
+
+
     .item{
-        padding: 0px 10px;
         height: 75px;
         font-size: 0.9em;
         background: @grey;
@@ -213,23 +280,35 @@ img{
         transition: background-color 0.5s;
         border-top: 1px solid #fff;
         border-bottom: 1px solid @grey_dark;
-        
-        
+
+
         &:hover, &.active{
             background: #fff;
         }
-        
+
         strong{
             display: block;
             font-size: 1.1em;
             margin-top: 13px;
         }
-        img{
+        .ikona{
             float: left;
             width: 70px;
             height: 70px;
+            background-size: 70px;
             margin-top: 3px;
-            margin-right: 15px;
+            margin: 1px 15px 0 10px;
+
+            > div{
+                width: 67px;
+            }
+        }
+        a{
+            display: block;
+            width: 100%;
+            padding-right: 10px;
+            color: #434343;
+            text-decoration: none;
         }
     }
 }
@@ -242,7 +321,7 @@ img{
         background: darken(@grey,10%);
         height: 2em;
         line-height: 2em;
-        
+
         a{
             color: #434343;
             text-decoration: none;
@@ -257,7 +336,7 @@ img{
 }
 #odznaky{
     display: none;
-    
+
     img{
         display: block;
         max-width: 250px;
@@ -267,6 +346,72 @@ img{
 #main{
     padding: 20px 30px;
     background: #fff;
+    clear: both;
+}
+#footer{
+    color: #fff;
+    text-align: right;
+    font-size: 0.9em;
+    padding: 5px 0;
 }
 
 
+.sisea-paging{
+    font-size: 0.9em;
+    padding: 10px 0 30px;
+
+    .sisea-result-pages{
+        display: block;
+    }
+}
+.sisea-search-form{
+    clear: both;
+}
+.nivo-controlNav{
+    padding: 0;
+    text-align: left;
+}
+.nivo-directionNav a{
+    color: #fff;
+    padding: 10px 20px;
+    top: 30%;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+.nivo-caption {
+    background: rgba(0,0,0,0.6);
+    opacity: 1;
+
+    a{
+        text-decoration: none; 
+    }
+
+}
+.nivo-controlNav.nivo-thumbs-enabled{
+    .nivo-control{
+        opacity: 0.5;
+        transition: opacity 0.5s;
+        margin-right: 0.3px;
+
+        &.active, &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+.gal-item{
+    display: inline-block;
+}
+
+#lbImage {
+    z-index:9999;
+}
+div#lbCenter,
+div#lbOverlay,
+div#lbBottomContainer {
+    z-index: inherit;
+}
