@@ -15,7 +15,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.fleft, .justifyleft{
+    float: left;
+}
+.fright, .justifyright{
+    float: right;
+}
+.clr{
+    clear: both;
+}
 html{
     font-family: 'Open Sans', Verdana, sans-serif;
     color: #434343;
@@ -29,9 +37,7 @@ a{
         color: lighten(@green, 10%);
     }
 }
-.clr{
-    clear: both;
-}
+
 p{
     margin-bottom: 1em;
 }
@@ -92,11 +98,29 @@ img{
 }
 
 #sections{
-    background: #dadfe1;
+    background: #2c3e50;
 
     ul{
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    li{
+
+    }
+    a{
+        color: #ccc !important;
+        background: #2c3e50;
+        border-left: 1px solid darken(@grey_dark, 20%);
+        border-right: 1px solid darken(@grey_darkest, 20%);
+        border-top: 1px solid darken(@grey_dark, 20%);
+        border-bottom: 1px solid darken(@grey_darkest, 20%);
+        transition: color 0.5s, background-color 0.5s;
+
+        &:hover{
+            background: lighten(#2c3e50, 10%) !important;
+            color: #fff !important;
+        }
     }
 }
 
@@ -254,7 +278,7 @@ img{
 }
 #social{
     height: auto; 
-    
+
     a{
         width: 50px;
         height: 50px;
@@ -300,7 +324,8 @@ img{
             margin: 1px 15px 0 10px;
 
             > div{
-                width: 67px;
+                width: 66px;
+                height: 66px;
             }
         }
         a{
@@ -347,6 +372,21 @@ img{
     padding: 20px 30px;
     background: #fff;
     clear: both;
+    overflow: hidden;
+
+    .nahled{
+        display: block;
+        overflow: hidden;
+        border-bottom: 1px solid @grey;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        .info{
+            overflow: hidden;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    }
 }
 #footer{
     color: #fff;
@@ -356,6 +396,54 @@ img{
 }
 
 
+/* SUBMENU */
+.submenu{
+    float: left;
+    width: 50%;
+    height: 75px;
+    overflow: hidden;
+    line-height: 75px;
+    font-size: 1.6em;
+    cursor: pointer;
+    margin-bottom: 5px;
+
+    a{
+        text-decoration: none;
+    }
+    .ikona{
+        float: left;
+        width: 70px;
+        height: 70px;
+        background-size: 70px;
+        margin: 1px 15px 0 10px;
+
+        > div{
+            width: 66px;
+            height: 66px;
+        }
+    }
+}
+/* PAGING */
+ul.pageList{
+    text-align: center;
+
+    li{
+        display: inline-block;
+
+        a{
+            padding: 5px;
+            text-decoration: none;
+            font-weight: bold;
+
+            &.active{
+                color: #000;
+            }
+        }
+    }
+}
+
+
+/* OTHER */
 .sisea-paging{
     font-size: 0.9em;
     padding: 10px 0 30px;
@@ -415,3 +503,4 @@ div#lbOverlay,
 div#lbBottomContainer {
     z-index: inherit;
 }
+
