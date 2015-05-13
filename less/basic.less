@@ -404,11 +404,16 @@ img{
     overflow: hidden;
     line-height: 75px;
     font-size: 1.6em;
-    cursor: pointer;
     margin-bottom: 5px;
 
     a{
         text-decoration: none;
+        
+        &:hover{
+            .ikona{
+                background: @green;
+            }
+        }
     }
     .ikona{
         float: left;
@@ -416,6 +421,7 @@ img{
         height: 70px;
         background-size: 70px;
         margin: 1px 15px 0 10px;
+        transition: background-color 0.5s;
 
         > div{
             width: 66px;
