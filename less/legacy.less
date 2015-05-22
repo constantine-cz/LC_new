@@ -1,0 +1,71 @@
+/* 
+    Created on : 21.5.2015, 9:36:29
+    Author     : Jiří Ludvar <jiri.ludvar@mediaaction.cz>
+*/
+
+@orange: #F5AB35;
+@orange_dark: #E87E04;
+@orange_darkest: #D35400;
+
+html.legacy{
+    background: #61bccf; /* Old browsers */
+    background: -moz-linear-gradient(top,  #61bccf 0%, #62bbfa 17%, #408965 78%, #16393e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#61bccf), color-stop(17%,#62bbfa), color-stop(78%,#408965), color-stop(100%,#16393e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61bccf', endColorstr='#16393e',GradientType=0 ); /* IE6-9 */
+
+    a{
+        color: @orange;
+
+        &:hover{
+            color: lighten(@orange, 10%);
+        }
+    }
+    #topnav{
+        overflow: hidden;
+
+        li{
+
+            &.active a{
+                border-bottom: 3px solid @orange;
+            }
+        }
+    }
+    #blog .sisea-search-form fieldset input[type=submit] {
+        background: @orange_dark;
+        border-bottom: 2px solid darken(@orange_darkest, 10%);
+
+        &:hover{
+            background: lighten(@orange_dark, 10%);
+        }
+    }
+
+    @media (min-width: 480px){
+        background: url(/gfx/bg_legacy.jpg);
+        height: 100%;
+        background-position: center top;
+        background-attachment: fixed;
+        background-size: cover;
+
+        #topnav{
+
+            li{
+                width: 100% / 3;
+            }
+        }
+    }
+
+    @media (min-width: 1024px){
+        #topnav{
+
+            li{
+                width: 100% / 6;
+            }
+        }
+    }
+}
+
+

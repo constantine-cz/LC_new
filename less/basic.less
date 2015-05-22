@@ -27,6 +27,15 @@
 html{
     font-family: 'Open Sans', Verdana, sans-serif;
     color: #434343;
+    
+    background: #61bccf; /* Old browsers */
+    background: -moz-linear-gradient(top,  #61bccf 0%, #62bbfa 17%, #408965 78%, #16393e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#61bccf), color-stop(17%,#62bbfa), color-stop(78%,#408965), color-stop(100%,#16393e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #61bccf 0%,#62bbfa 17%,#408965 78%,#16393e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61bccf', endColorstr='#16393e',GradientType=0 ); /* IE6-9 */
 
 }
 a{
@@ -297,9 +306,13 @@ img{
 
 
     .item{
+        display: block;
         height: 75px;
         font-size: 0.9em;
         background: @grey;
+        padding-right: 10px;
+        color: #434343;
+        text-decoration: none;
         cursor: pointer;
         transition: background-color 0.5s;
         border-top: 1px solid #fff;
@@ -331,9 +344,7 @@ img{
         a{
             display: block;
             width: 100%;
-            padding-right: 10px;
-            color: #434343;
-            text-decoration: none;
+
         }
     }
 }
@@ -397,9 +408,11 @@ img{
 
 
 /* SUBMENU */
+#submenu{
+    clear: both;
+    padding: 10px 0;
+}
 .submenu{
-    float: left;
-    width: 50%;
     height: 75px;
     overflow: hidden;
     line-height: 75px;
@@ -408,7 +421,7 @@ img{
 
     a{
         text-decoration: none;
-        
+
         &:hover{
             .ikona{
                 background: @green;
@@ -448,6 +461,13 @@ ul.pageList{
     }
 }
 
+.B_crumbBox{
+    padding-bottom: 10px;
+
+    li{
+        display: inline;
+    }
+}
 
 /* OTHER */
 .sisea-paging{
@@ -509,4 +529,5 @@ div#lbOverlay,
 div#lbBottomContainer {
     z-index: inherit;
 }
+
 
