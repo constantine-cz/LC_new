@@ -27,7 +27,7 @@
 html{
     font-family: 'Open Sans', Verdana, sans-serif;
     color: #434343;
-    
+
     background: #61bccf; /* Old browsers */
     background: -moz-linear-gradient(top,  #61bccf 0%, #62bbfa 17%, #408965 78%, #16393e 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#61bccf), color-stop(17%,#62bbfa), color-stop(78%,#408965), color-stop(100%,#16393e)); /* Chrome,Safari4+ */
@@ -468,6 +468,94 @@ ul.pageList{
         display: inline;
     }
 }
+
+/* TEST ZNALOSTI */
+#test{
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+    lara{
+        background: url(/gfx/lara-test.png) bottom right no-repeat;
+        height: 334px;
+        width: 81px;
+        position: absolute;
+        right: 0;
+        bottom: 48px;
+        z-index: 9999;
+    }
+    .loading{
+        display: none;
+    }
+    input[type=submit]{
+        display: none;
+    }
+}
+.otazka{
+    transition: 1s;
+    position: absolute;
+    background: #fff;
+    padding: 20px;
+    width: 500px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px #666;
+    height: 300px;
+    line-height: 1.6em;
+    margin-left: 105%;
+
+    &.active{
+        //display: block;
+        margin-left: 10px;
+
+    }
+
+    &.done{
+        margin-left: -100%
+    }
+
+    input[type=radio]{
+        margin-right: 10px;
+        margin-left: 20px;
+        vertical-align: middle;
+    }
+    b{
+        font-size: 1.2em;
+        display: block;
+    }
+}
+
+.hodnoceni{
+    padding-left: 130px;
+    height: 130px;
+
+    &.body0{
+        background: url(/gfx/body0.png) top left no-repeat;
+    }
+    &.body1{
+        background: url(/gfx/body1.png) top left no-repeat;
+    }
+    &.body2{
+        background: url(/gfx/body2.png) top left no-repeat;
+    }
+    &.body3{
+        background: url(/gfx/body3.png) top left no-repeat;
+    }
+    &.body4{
+        background: url(/gfx/body4.png) top left no-repeat;
+    }
+    &.body5{
+        background: url(/gfx/body5.png) top left no-repeat;
+    }
+    &.body6{
+        background: url(/gfx/body6.png) top left no-repeat;
+    }
+}
+
+#vysledek .body{
+    font-size: 2em;
+    text-align: center;
+}
+
 
 /* OTHER */
 .sisea-paging{
